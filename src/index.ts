@@ -13,10 +13,9 @@ const main = async ()=>{
 
     const orm = await MikroORM.init(microConfig)
     // console.log(orm.em)
-    await orm.getMigrator().up()
+    // await orm.getMigrator().up()
 
     const app = express()
-
 
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
